@@ -17,6 +17,8 @@ import { FilmesComponent } from './components/template/filmes/filmes.component';
 import { ProfissoesComponent } from './components/template/profissoes/profissoes.component';
 import { ComfotosComponent } from './components/template/comfotos/comfotos.component';
 import { CheckoutComponent } from './components/template/checkout/checkout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioMasterService } from 'src/services/usuario-master.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,11 @@ import { CheckoutComponent } from './components/template/checkout/checkout.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UsuarioMasterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
